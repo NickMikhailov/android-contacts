@@ -18,5 +18,10 @@ public class BaseListDiffCallback<T extends ListDiffInterface<T>> extends DiffUt
         return oldItem.equals(newItem);
     }
 
+    @Override
+    public Object getChangePayload(@NonNull T oldItem, @NonNull T newItem) {
+        return newItem;
+    }
+
 }
 
